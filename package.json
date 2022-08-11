@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "http://suttirak-mattaya.github.io/420-1b_directus_frontend",
+  "homepage": "http://suttirak-mattaya.github.io/frontend_1b",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.6.9",
