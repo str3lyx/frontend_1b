@@ -1,0 +1,57 @@
+nav {
+    width: 100vw;
+    height: 48px;
+    background: black;
+    position: fixed;
+    z-index: 2;
+    user-select: none;
+    top: 0;
+}
+
+.back-btn {
+    color: white;
+    height: 100%;
+    cursor: pointer;
+    font-size: 100%;
+    padding-left: 8px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    background-color: rgba($color: white, $alpha: 0.0);
+    .material-symbols-rounded {
+        font-size: 100%;
+    }
+    &:hover {
+        animation-name: mousein;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        background-color: rgba($color: white, $alpha: 0.1);
+        font-size: 120%;
+        .material-symbols-rounded {
+            font-size: 120%;
+        }
+    }
+    &:active {
+        background-color: rgba($color: white, $alpha: 0.2);
+        font-size: 110%;
+        .material-symbols-rounded {
+            font-size: 110%;
+        }
+    }
+}
+
+@keyframes mousein {
+    from {
+        background-color: rgba($color: white, $alpha: 0.0);
+        font-size: 100%;
+        .material-symbols-rounded {
+            font-size: 100%;
+        }
+    }
+    to {
+        background-color: rgba($color: white, $alpha: 0.1);
+        font-size: 120%;
+        .material-symbols-rounded {
+            font-size: 120%;
+        }
+    }
+}

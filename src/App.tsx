@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter, HashRouter, Link } from "react-router-dom";
+import StudentDashBoard from './pages/StudentDashBoard';
 
-function App() {
+import StudentInfo from './pages/StudentInfo';
+import TeacherInfo from './pages/TeacherInfo';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li><Link to="/student">Students</Link></li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<StudentDashBoard/>} />
+        <Route path="/student" element={<StudentDashBoard/>} />
+        <Route path="/student/:id" element={<StudentInfo/>} />
+        <Route path="/teacher/:id" element={<TeacherInfo/>} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
-
 export default App;
