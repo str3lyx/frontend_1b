@@ -17,6 +17,8 @@ const GET_TEACHER_DATA = (teacher_id: string) => gql`
       name,
       faculty,
       sub_faculty,
+      phone_number,
+      email,
       students {
         profile_picture {
           id
@@ -45,6 +47,8 @@ const TeacherInfo: React.FC = () => {
     name: '',
     faculty: '',
     sub_faculty: '',
+    phone_number: '',
+    email: '',
     subjects: []
   })
   const {id} = useParams()
