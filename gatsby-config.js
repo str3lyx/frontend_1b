@@ -6,5 +6,15 @@ module.exports = {
     title: `Gatsby SSG`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: '@directus/gatsby-source-directus',
+      options: {
+        url: `http://0.0.0.0:8055`,
+        auth: {
+          token: 'M-Sx9cNx6IhE_-pNBEpcP9XcJrmNuI6B',
+        },
+      },
+    },
+  ],
 }
