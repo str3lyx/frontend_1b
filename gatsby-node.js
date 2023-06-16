@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
     data.directus.student.forEach((student) => {
         createPage({
             path: `/student/${student.std_id}`,
-            component: path.resolve('src/templates/student-info.js'),
+            component: path.resolve('src/templates/student-info.jsx'),
             context: { id: student.std_id },
         })
     })
@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
     data.directus.teacher.forEach((teacher) => {
         createPage({
             path: `/teacher/${teacher.id}`,
-            component: path.resolve('src/templates/teacher-info.js'),
+            component: path.resolve('src/templates/teacher-info.jsx'),
             context: { id: teacher.id },
         })
     })
@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
     data.directus.subject_aggregated.forEach((subject) => {
         createPage({
             path: `/subject/${subject.group.subject_id}`,
-            component: path.resolve('src/templates/subject-info.js'),
+            component: path.resolve('src/templates/subject-info.jsx'),
             context: { id: subject.group.subject_id },
         })
     })

@@ -1,3 +1,5 @@
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -10,9 +12,9 @@ module.exports = {
     {
       resolve: '@directus/gatsby-source-directus',
       options: {
-        url: `http://0.0.0.0:8055`,
+        url: process.env.DIRECTUS_URL,
         auth: {
-          token: 'M-Sx9cNx6IhE_-pNBEpcP9XcJrmNuI6B',
+          token: process.env.DIRECTUS_TOKEN,
         },
       },
     },
