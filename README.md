@@ -1,49 +1,46 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# frontend_1b
 
-## 🚀 Quick start
+งานนี้เป็นส่วนหนึ่งของรายวิชา 240-420 ใช้ Gatsby เป็น Static Site Generator(SSG) โดยจะมีการดึงข้อมูลจาก API ในรูปแบบ GraphQL จาก [repo นี้](https://github.com/str3lyx/directus-backend-1b)
 
-1.  **Create a Gatsby site.**
+## Dependencies
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
++ `nodejs` v18
++ `npm`
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Setup
 
-2.  **Start developing.**
+```
+git clone https://github.com/str3lyx/frontend_1b.git
+cd frontend_1b
+npm install
+```
 
-    Navigate into your new site’s directory and start it up.
+## ตั้งค่า url ของ directus
+แก้ไขไฟล์ .env.development (สำหรับ development environment)
+```
+DIRECTUS_URL=*index url ของ directus*
+DIRECTUS_TOKEN=*ัyour token from user permission setting*
+```
+แก้ไขไฟล์ .env.production (สำหรับ build)
+```
+DIRECTUS_URL=*index url ของ directus*
+DIRECTUS_TOKEN=*ัyour token from user permission setting*
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Start Development Environment
+(เปิด server ของ directus ก่อน)
+```
+npm run develop
+```
 
-3.  **Open the code and start customizing!**
+## Build
+(เปิด server ของ directus ก่อน)
+```
+npm run build
+```
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## Deploy to GitHub Pages
+(ต้อง Build ก่อน)
+```
+npm run deploy
+```
