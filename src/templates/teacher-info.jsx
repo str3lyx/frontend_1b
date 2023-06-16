@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 const toClockFormat = (num) => {
   return (
@@ -19,6 +19,7 @@ export default function TeacherInfo({ data }) {
     <>
       <img
         src={profile ? `${process.env.DIRECTUS_URL}/assets/${profile.id}` : ''}
+        style={{ objectFit: 'cover' }}
         width='128'
         height='128'
       />
@@ -49,12 +50,13 @@ export default function TeacherInfo({ data }) {
                     ? `${process.env.DIRECTUS_URL}/assets/${profile.id}`
                     : ''
                 }
+                style={{ objectFit: 'cover' }}
                 width='24'
                 height='24'
               />
-              <a href={`/student/${student.std_id}`} style={{ marginLeft: 5 }}>
+              <Link to={`/student/${student.std_id}`} style={{ marginLeft: 5 }}>
                 {student.std_id} - {student.name}
-              </a>
+              </Link>
             </div>
           )
         })}
@@ -69,10 +71,10 @@ export default function TeacherInfo({ data }) {
               subject.subject_id && (
                 <div key={index}>
                   <div>
-                    <a href={`/subject/${subject.subject_id.subject_id}`}>
+                    <Link to={`/subject/${subject.subject_id.subject_id}`}>
                       {subject.subject_id.subject_id} -{' '}
                       {subject.subject_id.subject_name}
-                    </a>
+                    </Link>
                     <span> : Section {subject.subject_id.section}</span>
                   </div>
                   <div>

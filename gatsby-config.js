@@ -4,9 +4,10 @@ require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: '/frontend_1b',
   siteMetadata: {
     title: `Gatsby SSG`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://str3lyx.github.io/frontend_1b/`,
   },
   plugins: [
     {

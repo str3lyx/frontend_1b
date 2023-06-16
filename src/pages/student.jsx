@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 export default function StudentList({ data }) {
   const students = data.directus.student
@@ -21,12 +21,13 @@ export default function StudentList({ data }) {
                   ? `${process.env.DIRECTUS_URL}/assets/${student.profile_picture.id}`
                   : ''
               }
+              style={{ objectFit: 'cover' }}
               width='24'
               height='24'
             />
-            <a href={`/student/${student.std_id}`} style={{ marginLeft: 5 }}>
+            <Link to={`/student/${student.std_id}`} style={{ marginLeft: 5 }}>
               {student.std_id} - {student.name}
-            </a>
+            </Link>
           </div>
         )
       })}

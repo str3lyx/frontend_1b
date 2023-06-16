@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 export default function SubjectList({ data }) {
   const subjects = data.directus.subject.filter(
@@ -11,9 +11,9 @@ export default function SubjectList({ data }) {
       {subjects.map((subject, index) => {
         return (
           <div key={index}>
-            <a href={`/subject/${subject.subject_id}`}>
+            <Link to={`/subject/${subject.subject_id}`}>
               {subject.subject_id} - {subject.subject_name}
-            </a>
+            </Link>
           </div>
         )
       })}

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import StudentList from './student'
 import TeacherList from './teacher'
 import SubjectList from './subject'
@@ -14,7 +14,7 @@ export default function Index({ data }) {
     <>
       <div>
         <div>
-          <a href='/student'>รายชื่อนักศึกษา</a>
+          <Link to='/student'>รายชื่อนักศึกษา</Link>
         </div>
         <div style={{ marginLeft: 10 }}>
           <StudentList data={data} />
@@ -22,7 +22,7 @@ export default function Index({ data }) {
       </div>
       <div style={{ marginTop: 20 }}>
         <div>
-          <a href='/teacher'>รายชื่ออาจารย์</a>
+          <Link to='/teacher'>รายชื่ออาจารย์</Link>
         </div>
         <div style={{ marginLeft: 10 }}>
           <TeacherList data={data} />
@@ -30,7 +30,7 @@ export default function Index({ data }) {
       </div>
       <div style={{ marginTop: 20 }}>
         <div>
-          <a href='/subject'>รายวิชา</a>
+          <Link to='/subject'>รายวิชา</Link>
         </div>
         <div style={{ marginLeft: 10 }}>
           <SubjectList data={data} />
